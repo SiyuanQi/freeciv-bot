@@ -885,21 +885,21 @@ class ActGoto(StdAction):
         #           "dest_tile" : target_tile['index'],
         #           "extra"     : [EXTRA_NONE]
         #           }
-        packet = {"pid": packet_unit_orders,
-                  "unit_id": actor_unit['id'],
-                  "src_tile": actor_unit['tile'],
-                  "length": 1,
-                  "repeat": False,
-                  "vigilant": False,
-                  "orders": [{"order": ORDER_MOVE,
-                              "activity": ACTIVITY_LAST,
-                              "target": EXTRA_NONE,
-                              "sub_target": 0,
-                              "action": ACTION_COUNT,
-                              "dir": dir8
-                              }],
-                  #   "extra"     : [EXTRA_NONE]
-                  "dest_tile": target_tile['index']
+        packet = {"pid"       : packet_unit_orders,
+                  "unit_id"   : actor_unit['id'],
+                  "src_tile"  : actor_unit['tile'],
+                  "length"    : 1,
+                  "repeat"    : False,
+                  "vigilant"  : False,
+                  "orders"    : [{"order":ORDER_MOVE, 
+                                  "activity":ACTIVITY_LAST,
+                                  "target":EXTRA_NONE,
+                                  "sub_target" : 0,
+                                  "action":ACTION_COUNT,
+                                  "dir":dir8
+                                  }],
+                #   "extra"     : [EXTRA_NONE]
+                  "dest_tile" : target_tile['index']
                   }
 
         return packet
